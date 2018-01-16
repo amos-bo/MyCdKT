@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.ktcd.malc.kt_ma_lc.activity.ResourcesMapSettingActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_80"
+        android:layout_marginRight="@dimen/dp_80"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/bg_oval10_blue"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_dg_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/toolbar_btn_container"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton_left_selector"
+            android:button="@null"
+            android:checked="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="危险点"
+            android:textColor="@color/text_pressed_selector"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/other_1" />
+
+        <RadioButton
+            android:id="@+id/rb_person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/toolbar_btn_container"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton_mid_selector"
+            android:button="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="人员"
+            android:textColor="@color/text_pressed_selector"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/other_1" />
+
+        <RadioButton
+            android:id="@+id/rb_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/toolbar_btn_container"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton_right_selector"
+            android:button="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="场所"
+            android:textColor="@color/text_pressed_selector"
+            android:textSize="@dimen/sp_16" />
+    </RadioGroup>
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="@dimen/dp_16"-->
+    <!--android:layout_marginRight="@dimen/dp_16"-->
+    <!--android:layout_marginTop="@dimen/dp_20"-->
+    <!--android:orientation="vertical">-->
+
+    <com.ktcd.malc.kt_ma_lc.view.bottomnavigationbar.MyViewPager
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/viewpager"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_weight="1"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"></com.ktcd.malc.kt_ma_lc.view.bottomnavigationbar.MyViewPager>
+   <View
+       android:layout_width="match_parent"
+       android:background="@color/assist_4"
+       android:layout_height="1dp"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:layout_height="wrap_content">
+     <TextView
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:text="重置"
+         android:id="@+id/tv_reset"
+         android:gravity="center"
+         android:textColor="@color/assist_1"
+         android:paddingTop="@dimen/dp_14"
+         android:paddingBottom="@dimen/dp_14"
+         android:layout_height="wrap_content" />
+       <View
+           android:layout_width="2dp"
+           android:layout_marginTop="@dimen/dp_6"
+           android:layout_marginBottom="@dimen/dp_6"
+           android:background="@color/assist_4"
+           android:layout_height="match_parent"/>
+       <TextView
+           android:textColor="@color/assist_1"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:text="确定"
+           android:id="@+id/tv_ok"
+           android:paddingTop="@dimen/dp_14"
+           android:paddingBottom="@dimen/dp_14"
+           android:gravity="center"
+           android:layout_height="wrap_content" />
+   </LinearLayout>
+
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/framelayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="部门"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="@dimen/sp_16" />-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/recyclerview_partment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_10"-->
+    <!--android:background="@color/white"-->
+    <!--android:overScrollMode="never"></android.support.v7.widget.RecyclerView>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_20"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="类型"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="@dimen/sp_16" />-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/recyclerview_type"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_10"-->
+    <!--android:background="@color/white"-->
+    <!--android:overScrollMode="never"></android.support.v7.widget.RecyclerView>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</FrameLayout>-->
+    <!--</android.support.v4.widget.NestedScrollView>-->
+</LinearLayout>

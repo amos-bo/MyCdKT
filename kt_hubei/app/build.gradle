@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'com.neenbedankt.android-apt'
+//def releaseTime() {
+//    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+////}
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.ktcd.malc.kt_ma_lc"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        abortOnError false
+    }
+    //发布正式包的时候注意删除避免暴露密码 local.properties字段信息失败,需要修改默认的签名
+    signingConfigs {
+        release {
+            storeFile file("/../zowee_key")
+            storePassword "zowee284285624"
+            keyAlias "zowee"
+            keyPassword "zowee284285624"
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//          //as3.0以前  applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        // 输出apk名称为boohee_v1.0_2015-01-15_wandoujia.apk
+//                       def fileName = "KT_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+//                        output.outputFile = new File(outputFile.parent, fileName)
+//                    }
+//                }
+//            }
+
+//            android.applicationVariants.all { variant ->
+//                variant.outputs.all {
+//                    outputFileName ="联动指挥${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+//                }
+//            }
+        }
+    }
+    dexOptions {
+        jumboMode true
+    }
+
+//    flavorDimensions "default"
+//    productFlavors {
+//        wandoujia {dimension "default"}
+//        _360 {dimension "default"}
+//        baidu {dimension "default"}
+//        xiaomi {dimension "default"}
+//        tencent {dimension "default"}
+//        taobao {dimension "default"}
+//    }
+//    productFlavors.all {
+//        flavor -> flavor.manifestPlaceholders = [XB_VALE: name]
+//    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':baselayer')
+    // 拉刷新上拉加载更多
+    //**内存泄漏检测start*/
+    //**内存泄漏检测end*/
+    //    compile "org.igniterealtime.smack:smack-java7:4.2.0"
+    //    // Optional for XMPPTCPConnection
+    //    compile "org.igniterealtime.smack:smack-tcp:4.2.0"
+    //    // Optional for XMPP-IM (RFC 6121) support (Roster, Threaded Chats, …)
+    //    compile "org.igniterealtime.smack:smack-im:4.2.0"
+    //    // Optional for XMPP extensions support
+    //    compile "org.igniterealtime.smack:smack-extensions:4.2.0"
+    compile('com.android.support:appcompat-v7:26.+') {
+        exclude module: 'support-v4'
+    }
+    compile files('libs/BaiduLBS_Android.jar')
+    //    compile 'org.igniterealtime.smack:smack-android-extensions:4.2.0'
+//    compile 'org.igniterealtime.smack:smack-tcp:4.2.0'
+    compile files('libs/asmack.jar')
+    compile 'q.rorbin:badgeview:1.1.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.+'
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'q.rorbin:badgeview:1.1.2'
+    compile 'com.allenliu.badgeview:library:1.1.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.zhihu.android:matisse:0.5.0-alpha4'
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+//    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.1'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+}
+
+
+

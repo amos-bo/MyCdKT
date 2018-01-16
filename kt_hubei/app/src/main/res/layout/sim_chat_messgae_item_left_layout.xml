@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_5"
+        android:id="@+id/tv_chat_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sim_bg_chat_time_tag"
+        android:gravity="center"
+        android:paddingBottom="1dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="1dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:id="@+id/iv_chat_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/sim_vector_chat_avatar"/>
+
+        <TextView
+            android:id="@+id/tv_chat_msg_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_chat_avatar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_chat_msg_content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_chat_msg_username"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/iv_chat_avatar"
+            android:background="@drawable/sim_chat_from_bg_selector"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/tv_chat_msg_content_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"/>
+
+            <ImageView
+                android:id="@+id/iv_chat_msg_content_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="150dp"
+                android:maxWidth="150dp"
+                android:minHeight="50dp"
+                android:minWidth="50dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/iv_chat_msg_content_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxHeight="150dp"
+                android:maxWidth="150dp"
+                android:minHeight="50dp"
+                android:minWidth="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/gxx"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_chat_msg_content_loading"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/rl_chat_msg_content_layout"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sim_loading1"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

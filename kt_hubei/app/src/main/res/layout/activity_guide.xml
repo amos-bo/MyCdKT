@@ -1,0 +1,31 @@
+<RelativeLayout android:id="@+id/guide_framelayout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:text="立即体验"
+        android:textColor="#009bdc"
+        android:background="@color/colorAccent"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_viewpaper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+</RelativeLayout>

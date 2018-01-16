@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="120dp">-
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="250dp"
+        android:layout_height="130dp"></WebView>
+
+    <ImageButton
+        android:id="@+id/imgbt_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="right"
+        android:alpha="0.5"
+        android:background="@mipmap/img_delete" />
+</FrameLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ktcd.malc.baselayer.view.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+   <FrameLayout
+       android:layout_width="100dp"
+       android:layout_gravity="center"
+       android:layout_height="100dp">
+       <com.facebook.drawee.view.SimpleDraweeView
+           android:id="@+id/img_type"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_gravity="center"
+           android:background="@mipmap/icon_report_photo"
+           android:scaleType="centerCrop" />
+       <ImageView
+           android:id="@+id/img_paly"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:src="@mipmap/img_play"
+           android:visibility="gone" />
+
+       <ImageView
+           android:id="@+id/img_voice"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:src="@mipmap/img_voice_3" />
+
+       <ImageView
+           android:id="@+id/img_delete"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:layout_gravity="top|right"
+           android:src="@mipmap/img_delete" />
+   </FrameLayout>
+</com.ktcd.malc.baselayer.view.SquareLayout>

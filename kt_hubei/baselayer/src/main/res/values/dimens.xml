@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="divider_height">1dp</dimen>
+    <!--UI文字-->
+    <dimen name="navigation_title_text">18sp</dimen><!--导航标题文字-->
+    <dimen name="navigation_right_text">10sp</dimen><!--导航右侧文字-->
+</resources>

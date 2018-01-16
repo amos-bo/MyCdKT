@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 键盘Top部分，包含输入框，发送按钮，表情，更多功能按钮等 -->
+    <com.ktcd.malc.kt_ma_lc.xmppim.view.ui.keyboard.KeyBoardToolBoxView
+        android:id="@+id/keyboard_toolbox_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:background="@color/chat_keyboard_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"/>
+
+    <!-- 分割线 -->
+    <!--<include layout="@layout/sim_divider_horizontal_view"/>-->
+
+    <RelativeLayout
+        android:id="@+id/keyboardContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone">
+
+        <!-- more View -->
+        <com.ktcd.malc.kt_ma_lc.xmppim.view.ui.keyboard.KeyBoardMoreFunView
+            android:id="@+id/keyboard_more_fun_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/chat_keyboard_bg"
+            android:visibility="gone"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"/>
+
+        <!-- emotion view 可实现多种类型的表情 -->
+        <com.ktcd.malc.kt_ma_lc.xmppim.view.ui.emotion.KeyBoardEmotionView
+            android:id="@+id/keyboard_emotion_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/chat_keyboard_bg"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

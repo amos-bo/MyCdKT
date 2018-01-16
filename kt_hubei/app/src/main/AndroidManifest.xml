@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ktcd.malc.kt_ma_lc">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 往sdcard中写入数据的权限;在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 相机 录音机权限 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA.autofocus" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 百度定位权限 -->
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Android6.0 蓝牙扫描才需要 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- start 百度地图权限 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- end 百度地图权限 -->
+
+
+    <!-- 极光推送权限START -->
+    <permission
+        android:name="com.ktcd.malc.kt_ma_lc.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ktcd.malc.kt_ma_lc.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 极光推送权限END -->
+    <application
+        android:name=".applicatoin.KtkjMaLcApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="XB_DIY"
+            android:value="$[XB_VALE]"
+         />
+        <!-- 欢迎界面 -->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:configChanges="keyboard|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppStartLoadTranslucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 登陆 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="keyboard|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityStyle" />
+        <!-- 发布指令 -->
+        <activity
+            android:name=".activity.IssuanceOrderActivity"
+            android:configChanges="keyboard|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityStyle" />
+        <!-- 指令详情 -->
+        <activity
+            android:name=".activity.OrderDetailsActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 指令历史记录 -->
+        <activity
+            android:name=".activity.InstructionRecordActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityStyle" />
+        <!-- 首页 -->
+        <activity
+            android:name=".activity.HomeTabActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+        <!-- 指令管理 -->
+        <activity
+            android:name=".activity.InstructManagementActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityStyle" />
+        <!-- 选择人员 -->
+        <!-- <activity -->
+        <!-- android:name=".activity.PersonSelectActivity" -->
+        <!-- android:configChanges="keyboard|orientation" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!-- 事件地图 -->
+        <activity
+            android:name=".activity.EventInfoMapActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 事件列表 -->
+        <activity
+            android:name=".activity.EventListActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 事件列表 -->
+        <activity
+            android:name=".activity.OrderDetailsNewActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 事件列表 -->
+        <!-- 事件进展 -->
+        <activity
+            android:name=".activity.EventProgressListActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 视频录制 -->
+        <activity
+            android:name=".videolib.SmallVideoRecordingActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 视频录制 -->
+        <activity
+            android:name=".activity.EventReportActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 图片预览 -->
+        <activity
+            android:name=".activity.ImageCheckListActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 事件详情 -->
+        <activity
+            android:name=".activity.EventDetailActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 通知界面 -->
+        <activity
+            android:name=".activity.NoticeActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- 新-资源地图-->
+        <activity
+            android:name=".activity.NewResourcesMapActivity"
+            android:configChanges="keyboard|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ktcd.malc.kt_ma_lc.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+        <!-- 推送 -->
+        <activity
+            android:name=".client.NotificationDetailsActivity"
+            android:label="Notification Details" />
+        <activity
+            android:name=".client.NotificationSettingsActivity"
+            android:label="Notification Settings" />
+
+        <service
+            android:name=".client.NotificationService"
+            android:enabled="true"
+            android:label="NotificationService">
+            <intent-filter>
+                <action android:name="org.androidpn.client.NotificationService" />
+            </intent-filter>
+        </service>
+
+        <!-- ======================百度地图定位配置=========================================== -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="OtGQtsyTDUEjTDXiEoozkEEQQVhO1Llk" />
+        <!-- ==========我是华丽的分割线======================================== -->
+
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="5133f35e0b161617f838fca0" />
+        <!-- <meta-data -->
+        <!-- android:name="JPUSH_APPKEY" -->
+        <!-- android:value="92dcc48f1daa5c7d0ebb6cfb"/> -->
+        <!-- </>值来自开发者平台取得的AppKey -->
+        <activity android:name=".activity.ResourcesMapActivity" />
+        <activity android:name=".activity.ResourcesMapSettingActivity"></activity>
+        <activity android:name=".activity.NewResourcesMapSettingActivity"></activity>
+        <activity android:name=".activity.NewMoreResourcesMapActivity"></activity>
+    </application>
+
+</manifest>

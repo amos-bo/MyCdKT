@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorControlHighlight">#1f000000</color>
+    <color name="bg_toolbar_color">#f3f3f3</color>
+    <color name="chat_keyboard_emotion_tab_item_checked_color">#bfbfbf</color>
+    <color name="chat_keyboard_bg">#ECECEC</color>
+    <color name="chat_keyboard_emotion_tab_item_unchecked_color">@color/chat_keyboard_bg</color>
+
+    <color name="blue">#4179df</color>
+    <color name="black">#212121</color>
+    <color name="white">#ffffff</color>
+    <color name="assist_1">#6e7984</color>
+    <color name="assist_2">#999999</color>
+    <color name="assist_3">#cccccc</color>
+    <color name="assist_4">#b2b2b2</color>
+    <color name="assist_5">#f3f3f8</color>
+    <color name="assist_6">#f7f7f7</color>
+    <color name="assist_7">#f2f2f2</color>
+    <color name="assist_8">#e5e5e5</color>
+    <color name="warning_1">#ba2424</color>
+    <color name="warning_2">#ff4141</color>
+    <color name="warning_3">#fee5e4</color>
+    <color name="other_1">#3f51b5</color>
+    <color name="other_2">#f17921</color>
+    <color name="other_2_press">#d96c1e</color>
+
+    <color name="other_3">#dce8f6</color>
+    <color name="other_3_press">#4279e0</color>
+
+    <color name="other_4">#eceaeb</color>
+    <color name="other_4_press">#959394</color>
+
+    <color name="blue_press">#396ac4</color>
+    <color name="yellow">#f1af21</color>
+
+    <color name="red_normal">#e24838</color>
+    <color name="red_press">#c94132</color>
+
+
+
+</resources>

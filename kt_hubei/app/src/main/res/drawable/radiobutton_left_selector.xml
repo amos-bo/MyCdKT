@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 默认颜色 -->
+    <item android:state_checked="false" android:drawable="@drawable/bg_left_oval10_white"></item>
+    <!-- 点击时的颜色 -->
+    <item android:state_checked="true" android:drawable="@drawable/bg_left_oval10_blue"></item>
+</selector>
